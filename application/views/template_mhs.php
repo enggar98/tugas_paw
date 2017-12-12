@@ -107,28 +107,28 @@
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
                     <li class="active">
-                        <a href="index.html">
+                        <a href="#">
                             <i class="material-icons">home</i>
                             <span>Home</span>
                         </a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="pages/helper-classes.html">
                             <i class="material-icons">insert_comment</i>
                             <span>Kelola Informasi</span>
                         </a>
-                    </li>
+                    </li>-->
                     <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
+                        <a href="#" class="menu-toggle">
                             <i class="material-icons">book</i>
-                            <span>Tugas Akhir 1</span>
+                            <span>Modul</span>
                         </a>
                        
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">book</i>
-                            <span>Tugas Akhir 2</span>
+                            <span>Ujian</span>
                         </a>
                         
                     </li>

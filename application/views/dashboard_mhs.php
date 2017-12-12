@@ -11,7 +11,7 @@
 		    </div><!-- /.box-tools -->
 		  </div><!-- /.box-header -->
 		  <div class="box-body">
-		  	<center><h1>Selamat Datang Mahasiswa </h1></center>
+		  	<center><h1>Selamat Datang <?=$this->session->userdata('nama')?> </h1></center>
 		    <center><h1>Program Studi Informatika UIN Bandung</h1></center>
 		  </div><!-- /.box-body -->
 		</div><!-- /.box -->

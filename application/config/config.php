@@ -24,7 +24,7 @@ $config['modules_locations'] = array(
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/PengelolaanTA';
+$config['base_url']	= 'http://localhost/tugas_paw/';
 
 /*
 |--------------------------------------------------------------------------
@@ -234,7 +234,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = 'PengelolaanTA';
+$config['encryption_key'] = 'tugas_paw';
 
 /*
 |--------------------------------------------------------------------------

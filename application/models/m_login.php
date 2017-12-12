@@ -33,8 +33,6 @@
 			$data_session['peminatan'] = $mhs->row()->peminatan;
 			$data_session['level_user'] = $mhs->row()->level_user;
 			$data_session['status'] = $mhs->row()->status;
-			$data_session['nama_dosen_pem1'] = $mhs->row()->nama_dosen_pem1;
-			$data_session['nama_dosen_pem2'] = $mhs->row()->nama_dosen_pem2;
 			$this->session->set_userdata($data_session);
 			return true;
 		}else {

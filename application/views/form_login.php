@@ -29,7 +29,6 @@
     <div class="login-box">
         <div class="logo">
             <a href="javascript:void(0);">Selamat<b> Datang</b></a>
-            <small>Sistem Informasi Tugas Akhir</small>
         </div>
         <div class="card">
             <div class="body">
@@ -58,7 +57,8 @@
                     <div class="msg">Masukan Username dan Password</div>
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="material-icons">Username</i>
+                            <!--<i class="material-icons">Username</i>-->
+                            <i>Username</i>
                         </span>
                         <div class="form-line">
                             <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
@@ -66,7 +66,8 @@
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="material-icons">Password</i>
+                            <!--<i class="material-icons">Password</i>-->
+                            <i>Password</i>
                         </span>
                         <div class="form-line">
                             <input type="password" class="form-control" name="password" placeholder="Password" required>

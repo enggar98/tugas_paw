@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Pendaftaran Mahasiswa</title>
+    <title>Pendaftaran</title>
     <!-- Favicon-->
     <link rel="icon" href="<?php echo base_url();?>assets/favicon.ico" type="image/x-icon">
 
@@ -60,7 +60,7 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="<?php echo base_url();?>assets/index.html">PENDAFTARAN MAHASISWA</a>
+                <a class="navbar-brand" href="<?php echo base_url();?>assets/index.html">PENDAFTARAN</a>
             </div>
         </div>
     </nav>
@@ -69,7 +69,7 @@
         <div class="container" style="margin-top:100px;">
             <div class="block-header">
                 <h2>
-                    DAFTAR AKUN TUGAS AKHIR 
+                    DAFTAR AKUN  
                 </h2>
             </div>
             <!-- Basic Validation -->
@@ -80,7 +80,7 @@
                             <h2>SILAHKAN DAFTAR DISINI...</h2>
                         </div>
                         <div class="body">                            
-                            <form id="form_validation" action="login/insert_pendaftaran" method="POST">
+                            <form id="form_validation" action="<?=base_url('login/insert_pendaftaran')?>" method="POST">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="text" class="form-control" name="username" placeholder="Username" required/>
@@ -141,7 +141,7 @@
                                     </select>-->
                                 </div>
                                 <div class="form-group">
-                                    <select class="form-control show-tick" name="id_dosen_wali" required>
+                                    <!--<select class="form-control show-tick" name="id_dosen_wali" required>
                                         <option value="">-- Pilih Dosen Wali --</option>
                                           <?php
                                               foreach($dosen as $datadosen) {
@@ -149,7 +149,7 @@
                                                 echo "<option  value='".$datadosen[0]."'>".$datadosen[1]."</option>'";
                                               }
                                            ?>
-                                    </select>
+                                    </select>-->
                                 </div>
                                 <input name="tambah" type="submit" class="btn btn-primary" value="SIMPAN">
                                 <input name="reset" type="reset" class="btn btn-default btn-default" value="RESET">

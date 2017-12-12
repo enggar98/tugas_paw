@@ -69,12 +69,10 @@
 				'email' => $this->input->post('email'),
 				'no_hp' => $this->input->post('no_hp'),
 				'status_mhs' => $status_mhs,
-				'peminatan' => $this->input->post('peminatan'),
-				'dosen_wali' => $this->input->post('dosen_wali'),
 				'username' => $this->input->post('username'),
 				'password' => md5($this->input->post('password')),
 				'level_user' => $level_user,
-			);
+			);	
 
 			$query = $this->m_login->insert_data_mhs($mhs);
 			if ($query) {
