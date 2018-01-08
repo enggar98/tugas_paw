@@ -23,14 +23,15 @@
 	
 		if($akun->num_rows() == 1)
 		{
-			$data_session['level_user'] = $akun->row()->level_user;
+			$data_session['username'] = $akun->row()->username;
+			$data_session['id_user'] = $akun->row()->id_user;
+			$data_session['level_user'] = $akun->row()->level_user;	
 			$this->session->set_userdata($data_session);
 			return true;
 		}else if($mhs->num_rows() == 1)
 		{
 			$data_session['nim'] = $mhs->row()->nim;
 			$data_session['nama'] = $mhs->row()->nama;
-			$data_session['peminatan'] = $mhs->row()->peminatan;
 			$data_session['level_user'] = $mhs->row()->level_user;
 			$data_session['status'] = $mhs->row()->status;
 			$this->session->set_userdata($data_session);

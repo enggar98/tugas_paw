@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Mahasiswa</title>
+    <title>Dosen</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -21,6 +21,9 @@
 
     <!-- Animation Css -->
     <link href="<?php echo base_url();?>assets/plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Bootstrap Material Datetime Picker Css -->
+    <link href="<?php echo base_url();?>assets/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
 
     <!-- Morris Chart Css-->
     <link href="<?php echo base_url();?>assets/plugins/morrisjs/morris.css" rel="stylesheet" />
@@ -66,7 +69,7 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html">MAHASISWA</a>
+                <a class="navbar-brand" href="index.html">DOSEN</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -85,8 +88,8 @@
                     <img src="<?php echo base_url();?>assets/images/user.png" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $this->session->userdata('nama')?></div>
-                    <div class="email"><?php echo $this->session->userdata('nim')?></div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $this->session->userdata('username')?></div>
+                    <div class="email"><?php echo $this->session->userdata('level_user')?></div>
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
@@ -107,33 +110,23 @@
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
                     <li class="active">
-                        <a href="#">
+                        <a href="<?php echo base_url(); ?>dashboard">
                             <i class="material-icons">home</i>
                             <span>Home</span>
                         </a>
                     </li>
-                    <!--<li>
-                        <a href="pages/helper-classes.html">
-                            <i class="material-icons">insert_comment</i>
-                            <span>Kelola Informasi</span>
-                        </a>
-                    </li>-->
                     <li>
-                        <a href="#" class="menu-toggle">
+                        <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">book</i>
                             <span>Kelas</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="<?php echo base_url(); ?>mhs/get_kelas">Daftar Kelas</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url(); ?>mhs/get_modul">Modul</a>
+                                <a href="<?php echo base_url(); ?>dosen/get_kelas">Daftar Kelas</a>
                             </li>
                         </ul>
-                        </li>
-                    <li>
                     </li>
+                    
                     <li>
                         <a href="<?php echo base_url(); ?>login/logout">
                             <i class="material-icons">settings_power</i>
@@ -300,7 +293,7 @@
         <!-- #END# Right Sidebar -->
     </section>
 
-    <section class="content">
+        <section class="content">
         <!-- ISI CONTENT DISINI -->
         <?php $this->load->view($page);?>
     </section>
@@ -319,6 +312,12 @@
 
     <!-- Waves Effect Plugin Js -->
     <script src="<?php echo base_url();?>assets/plugins/node-waves/waves.js"></script>
+
+    <!-- Moment Plugin Js -->
+    <script src="<?php echo base_url();?>assets/plugins/momentjs/moment.js"></script>
+
+    <!-- Bootstrap Material Datetime Picker Plugin Js -->
+    <script src="<?php echo base_url();?>assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 
     <!-- Jquery CountTo Plugin Js -->
     <script src="<?php echo base_url();?>assets/plugins/jquery-countto/jquery.countTo.js"></script>
@@ -343,10 +342,11 @@
     <!-- Custom Js -->
     <script src="<?php echo base_url();?>assets/js/admin.js"></script>
     <script src="<?php echo base_url();?>assets/js/pages/tables/jquery-datatable.js"></script>
-    <script src="<?php echo base_url();?>assets/js/pages/index.js"></script>
-
     <!-- Demo Js -->
     <script src="<?php echo base_url();?>assets/js/demo.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="<?php echo base_url();?>assets/plugins/bootstrap-select/js/bootstrap-select.js"></script>
 
     <!-- Jquery DataTable Plugin Js -->
     <script src="<?php echo base_url();?>assets/plugins/jquery-datatable/jquery.dataTables.js"></script>
@@ -358,6 +358,22 @@
     <script src="<?php echo base_url();?>assets/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
     <script src="<?php echo base_url();?>assets/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
     <script src="<?php echo base_url();?>assets/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {   
+            $('#tgl_lahir').bootstrapMaterialDatePicker({format : 'YYYY-MM-DD', weekStart : 0, time: false });    
+        }); 
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {   
+            $('#tgl_buka').bootstrapMaterialDatePicker({format : 'YYYY-MM-DD', weekStart : 0, time: false });    
+        }); 
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {   
+            $('#tgl_tutup').bootstrapMaterialDatePicker({format : 'YYYY-MM-DD', weekStart : 0, time: false });    
+        }); 
+    </script>
     
    
 </body>

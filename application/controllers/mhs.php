@@ -697,6 +697,16 @@
 			$this->load->view('template_mhs', $data);
 		}
 
+        public function get_modul(){
+
+            $data = array(
+                          'page' => 'page_modul_mhs',
+                          'data_informasi' => $this->m_mhs->get_modul(),
+            );
+
+            $this->load->view('template_mhs', $data);
+        }
+
 
 // ==========================================KELOLA NILAI SIDANG======================================================
 
@@ -902,12 +912,13 @@
             $this->load->view('template_mhs', $data);
         }
 
-//==========================================KELOLA JADWAL REVIEW===============================================
-        public function get_jadwal_review(){
+//==========================================KELAS===============================================
+        public function get_kelas(){
 
             $data = array(
-                          'data_jadwalreview' => $this->m_mhs->get_jadwal_review(),
-                          'page' => 'page_jadwal_review',
+                          'data_kelas' => $this->m_mhs->get_kelas(),
+                          'page' => 'page_kelas',
+                          //'nama_dosen' => $this->m_mhs->get_dosen(),
 
             );
 
@@ -948,4 +959,8 @@
 
 
 	}
+
+    
+
+
 ?>
