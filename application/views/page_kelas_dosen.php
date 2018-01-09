@@ -48,7 +48,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php echo $this->session->userdata('id_user'); ?>
                                     <?php foreach($data_kelas->result() as $key => $val): ?>
                                             <tr>
                                                 <td><?php echo $val->id_kelas?></td>

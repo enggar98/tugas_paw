@@ -20,18 +20,8 @@
 				$this->load->view('template_mhs', $data);
 			}
 			else if($this->session->userdata('level_user') == 'dosen'){
-				$data['page'] = 'dashboar_dosen';
+				$data['page'] = 'dashboard_dosen';
 				$this->load->view('template_dosen',$data);
-			}
-			else if($this->session->userdata('level_user') == 'koorta1')
-			{
-				$data['page'] = 'dashboard_koorta1';
-				$this->load->view('template_koorta1', $data);
-			}
-			else if($this->session->userdata('level_user') == 'koorta2')
-			{
-				$data['page'] = 'dashboard_koorta2';
-				$this->load->view('template_koorta2', $data);
 			}
 			else if($this->session->userdata('level_user') == 'admin')
 			{

@@ -28,12 +28,9 @@
                         <div class="form-group">
                                     <select class="form-control show-tick" name="level_user" required>
                                         <option value="">-- Pilih Level User --</option>
-                                        <option value="mhs">Mahasiswa</option>
                                         <option value="dosen">Dosen</option>
                                         <option value="admin">Admin</option>
-                                        <option value="staff">Staff</option>
-                                        <option value="koorta1">Koordinator TA 1</option>
-                                        <option value="koorta2">Koordinator TA 2</option>
+                                        <option value="staff">Staff</option>>
                                     </select>
                                 </div>
                         <input name="tambah" type="submit" class="btn btn-primary" value="SIMPAN">

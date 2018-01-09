@@ -114,7 +114,7 @@
                             <i class="material-icons">home</i>
                             <span>Home</span>
                         </a>
-                    </li>
+                    </li>   
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">book</i>
