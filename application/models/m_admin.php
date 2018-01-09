@@ -172,6 +172,17 @@ class m_admin extends CI_Model{
 			$this->db->delete('kelas');
 	}
 
+	public function insert_akun($data)
+	{
+		$this->db->insert('tb_akun', $data);
+		return $this->db->insert_id();
+	}
+
+	public function get_akun_by_id($id)
+	{
+		$this->db->where('id_user', $id);
+		return $this->db->get('tb_akun');
+	}
 }
 
 ?>
